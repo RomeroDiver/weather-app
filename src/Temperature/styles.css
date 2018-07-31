@@ -1,0 +1,11 @@
+.temperature__wrapper {
+  display: flex;
+}
+
+.temperature__val {
+  font-size: 2.5rem;
+}
+
+.temperature__units {
+
+}
