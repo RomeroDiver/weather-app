@@ -1,5 +1,6 @@
 .weatherCard {
-  max-width: 600px;
+  max-width: 350px;
+  margin: auto;
 }
 
 .weatherCard__content {
@@ -8,7 +9,21 @@
 }
 
 .weatherCard__weather {
+  padding: 0 20px;
   flex: 2;
+}
+
+.weatherCard__day {
+  color: #4236dd;
+}
+
+.weatherCard__city {
+  color: #A4AEB5;
+}
+
+.weatherCard__weatherDesc {
+  margin-bottom: 0;
+  text-transform: capitalize;
 }
 
 .weatherCard__details {
@@ -19,4 +34,6 @@
 
 .weatherCard__details > div {
   padding: 20px 10px;
+  display: flex;
+  justify-content: space-around
 }

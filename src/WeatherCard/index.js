@@ -5,6 +5,7 @@ import Raining from '../Icons/Raining';
 import Drop from '../Icons/Drop';
 import Wind from '../Icons/Wind';
 import { getDay } from '../services/date';
+import Temperature from '../Temperature';
 
 class WeatherCard extends PureComponent {
   iconsWidth = 24
@@ -17,10 +18,10 @@ class WeatherCard extends PureComponent {
       <Card raised classes={{ root: 'weatherCard' }}>
         <div className="weatherCard__content">
           <div className="weatherCard__weather">
-            {getDay(this.today.getDay())}
-            city: {weather.city}
-            temp: {weather.temperature}
-            desc: {weather.description}
+            <h2 className="weatherCard__day">{getDay(this.today.getDay())}</h2>
+            <Temperature temperature={weather.temperature} />
+            <p className="weatherCard__weatherDesc">{weather.description}</p>
+            <span className="weatherCard__city">{weather.city}</span>
           </div>
           <div className="weatherCard__details">
             <div>

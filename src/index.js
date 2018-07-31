@@ -9,7 +9,7 @@ import './styles.css';
  * TODO:
  * 1. UI changes
  * 2. Weather history
- * 3. Next/previous day
+ * 3. Error handling
  */
 const Index = () => {
   return (
@@ -20,7 +20,7 @@ const Index = () => {
             return (
               <main className="mainApp">
                 <div className="mainApp__header">
-                  <Search loadWeather={actions.loadWeather} />
+                  <Search loadWeather={actions.loadWeather} placeholder="Enter city" />
                 </div>
                 <section className="mainApp__content">
                   { weather && <WeatherCard weather={weather} /> }

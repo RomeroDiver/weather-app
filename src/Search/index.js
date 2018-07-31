@@ -8,6 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 export default class Search extends Component {
   static propTypes = {
     loadWeather: PropTypes.func.isRequired,
+    placeholder: PropTypes.string,
   }
 
   state = {
@@ -32,6 +33,7 @@ export default class Search extends Component {
     return (
       <div>
         <Input
+          placeholder={this.props.placeholder}
           value={this.state.searchVal}
           onChange={this.handleChange}
           onKeyPress={this.handleKeyPress}
