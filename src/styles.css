@@ -1,0 +1,13 @@
+.mainApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainApp__header {
+  margin-bottom: 2rem;
+}
+
+.mainApp__content {
+
+}
