@@ -1,0 +1,22 @@
+.weatherCard {
+  max-width: 600px;
+}
+
+.weatherCard__content {
+  display: flex;
+  padding: 0;
+}
+
+.weatherCard__weather {
+  flex: 2;
+}
+
+.weatherCard__details {
+  flex: 1;
+  background-color: #4236dd;
+  color: #fff;
+}
+
+.weatherCard__details > div {
+  padding: 20px 10px;
+}
