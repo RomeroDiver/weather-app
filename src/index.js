@@ -9,7 +9,6 @@ import ErrorHandler from "./ErrorHandler";
 /**
  * TODO:
  * 2. Weather history
- * 3. Error handling
  */
 const Index = () => {
   return (
