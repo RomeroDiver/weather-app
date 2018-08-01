@@ -4,10 +4,10 @@ import WeatherCard from './WeatherCard';
 import WeatherStore, { WeatherContext } from './WeatherStore';
 import Search from './Search';
 import './styles.css';
+import ErrorHandler from "./ErrorHandler";
 
 /**
  * TODO:
- * 1. UI changes
  * 2. Weather history
  * 3. Error handling
  */
@@ -16,7 +16,7 @@ const Index = () => {
     <WeatherStore>
       <WeatherContext.Consumer>
         {
-          ({ weather, actions }) => {
+          ({ weather, actions, error }) => {
             return (
               <main className="mainApp">
                 <div className="mainApp__header">
@@ -25,6 +25,7 @@ const Index = () => {
                 <section className="mainApp__content">
                   { weather && <WeatherCard weather={weather} /> }
                 </section>
+                <ErrorHandler error={error} dismissError={actions.dismissError} />
               </main>
             );
           }
