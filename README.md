@@ -9,5 +9,5 @@ Project to try out react 16.x context
 1. `npm run serve`
 
 # TODO list
-1. Add weather history
+1. Add weather history - *it has only paid plan*
 2. Add weather forecast for the next 5 days

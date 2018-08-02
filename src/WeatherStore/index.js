@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import {
   getCurrentWeather,
+  getWeatherHistory,
 } from '../services/weather';
 
 export const WeatherContext = React.createContext({});
@@ -13,15 +14,6 @@ class WeatherStore extends PureComponent {
 
   loadWeather = (city) => {
     getCurrentWeather(city)
-      .then((response) => {
-        if (!response.ok) {
-          const error = new Error(response.statusText);
-          error.status = response.status;
-          throw error;
-        }
-        return response;
-      })
-      .then(response => response.json())
       .then(response => {
         const weather = {
           wind: { speed: response.wind.speed },
@@ -33,11 +25,13 @@ class WeatherStore extends PureComponent {
         }
         this.setState({ weather })
       })
-      .catch((e) => {
-        if (e.status === 404) {
-          this.setState({ error: e.status })
-        }
-      })
+      .catch(this.handleError)
+  }
+
+  handleError = (e) => {
+    if (e.status === 404) {
+      this.setState({ error: e.status })
+    }
   }
 
   dismissError = () => {

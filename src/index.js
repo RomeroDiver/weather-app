@@ -6,10 +6,6 @@ import Search from './Search';
 import './styles.css';
 import ErrorHandler from "./ErrorHandler";
 
-/**
- * TODO:
- * 2. Weather history
- */
 const Index = () => {
   return (
     <WeatherStore>
