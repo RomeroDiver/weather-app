@@ -1,0 +1,33 @@
+.weatherForecastCard {
+  flex: 1 0 150px;
+  height: 180px;
+  margin: auto 10px;
+  padding: 20px 15px;
+}
+
+.weatherForecastCard__heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherForecastCard__day {
+  text-transform: uppercase;
+  color: #A9A9A9;
+  font-size: 14px;
+}
+
+.weatherForecastCard__time {
+  font-size: 14px;
+  color: #4236dd;
+}
+
+.weatherForecastCard__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.weatherForecastCard__description {
+  text-transform: capitalize;
+}
