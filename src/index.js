@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import WeatherCard from './WeatherCard';
+import WeatherForecast from './WeatherForecast';
 import WeatherStore, { WeatherContext } from './WeatherStore';
 import Search from './Search';
 import './styles.css';
@@ -11,7 +12,7 @@ const Index = () => {
     <WeatherStore>
       <WeatherContext.Consumer>
         {
-          ({ weather, actions, error }) => {
+          ({ weather, weatherForecast, actions, error }) => {
             return (
               <main className="mainApp">
                 <div className="mainApp__header">
@@ -19,6 +20,7 @@ const Index = () => {
                 </div>
                 <section className="mainApp__content">
                   { weather && <WeatherCard weather={weather} /> }
+                  { weather && <WeatherForecast city={weather.city} weatherForecast={weatherForecast} loadForecast={actions.loadForecast} />}
                 </section>
                 <ErrorHandler error={error} dismissError={actions.dismissError} />
               </main>

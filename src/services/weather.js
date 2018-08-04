@@ -21,3 +21,9 @@ export function getCurrentWeather(city) {
 
   return fetchRequest(url);
 }
+
+export function getForecast(city) {
+  const url = `${baseEndpoint}/forecast?q=${city}&units=metric&APPID=${WEATHER_API_KEY}`;
+
+  return fetchRequest(url);
+}
