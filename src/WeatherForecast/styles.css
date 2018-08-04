@@ -1,0 +1,7 @@
+.weatherForecast {
+  display: flex;
+  max-width: 70vw;
+  margin: auto;
+  overflow: scroll;
+  padding: 20px 0;
+}
